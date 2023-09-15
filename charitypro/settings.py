@@ -97,7 +97,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGING_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/' #redirecting to this url after success log in
+LOGIN_REDIRECT_URL = '/' #redirecting to this url after success login
 
 WSGI_APPLICATION = 'charitypro.wsgi.application'
 
