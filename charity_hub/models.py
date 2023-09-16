@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Charity(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Charities'
+        
     name = models.CharField(max_length=255)
     description = models.TextField()
     contact_name = models.CharField(max_length=255, null=True, blank=True)

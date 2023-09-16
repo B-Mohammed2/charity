@@ -3,6 +3,19 @@ from . models import Charity, UserProfile
 
 # Register your models here.
 
+class CharityAdmin(admin.ModelAdmin):
+    list_display=(
+        'name',
+        'website'
+    )
 
-admin.site.register(Charity)
-admin.site.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+     list_display=(
+        'first_name',
+        'last_name',
+        
+    )
+
+
+admin.site.register(Charity, CharityAdmin)
+admin.site.register(UserProfile, UserProfileAdmin)
