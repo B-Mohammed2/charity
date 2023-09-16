@@ -17,6 +17,13 @@ body {
 
 nav {
     background-color: #00ff3300; 
+    padding-left: 140px;
+}
+
+.navbar-nav {
+    margin-top: 0; /* Remove top margin on the ul element */
+    display: flex;
+    align-items: center; /* Vertically align items within the navbar */
 }
 .custom-nav-link {
     color: rgba(0, 0, 0, 0.825); /* Replace with your desired text color code */
@@ -24,6 +31,7 @@ nav {
     display: inline;
     padding: 5px;
 }
+
 .custom-nav-link:hover {
     text-decoration: underline; /* Add underline on hover */
     color: rgba(84, 80, 80, 0.713);

@@ -23,32 +23,45 @@
     <div class="sliding-ribbon">
         <h1 class="mb-0">Welcome to Helping Hands Charity</h1>
     </div>
-    <header class="ustom-bg-color text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
+    <header class="ustom-bg-color text-white py-3 header">
+        <!-- <div class="container d-flex justify-content-between align-items-center"> -->
             <!-- Logo in the navbar -->
-            <img src="{% static 'media/helping_logo.png' %}" alt="Logo" class="logo">
+            <!-- <img src="{% static 'media/helping_logo.png' %}" alt="Logo" class="logo"> -->
             
-            <nav>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <a href="{% url 'home' %}" class="custom-nav-link">Home</a>
-                    </li>
-                    <li class="list-inline-item">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="http://127.0.0.1:8000/admin/" class="custom-nav-link"> Charity Management</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="{% static 'media/helping_logo.png' %}" alt="Logo" class="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- <ul class="list-inline mb-0"> -->
+                            <li class="list-inline-item">
+                                <a href="{% url 'home' %}" class="custom-nav-link">Home</a>
+                            </li>
+                            {% if request.user.is_authenticated %}
+                                <li class="list-inline-item">
+                                    {% if request.user.is_superuser %}
+                                        <a href="http://127.0.0.1:8000/admin/" class="custom-nav-link"> Charity Management</a>
+                                    {% endif %}
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" class="custom-nav-link">My Profile</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="custom-nav-link">Welcome {{ user.username }}</p>
+                                    <a href="{% url 'account_logout' %}" class="custom-nav-link">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="custom-nav-link">Register</a>
+                                    <a href="{% url 'account_login' %}" class="custom-nav-link">Login</a>
+                                
+                                </li>
                             {% endif %}
-                            <a href="" class="custom-nav-link">My Profile</a>
-                            <p class="custom-nav-link">Welcome {{ user.username }}</p>
-                            <a href="{% url 'account_logout' %}" class="custom-nav-link">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="custom-nav-link">Register</a>
-                            <a href="{% url 'account_login' %}" class="custom-nav-link">Login</a>
-                        {% endif %}
-                    </li>
-                </ul>
+                        </ul>
+                    </div>
             </nav>
-        </div>
+        <!-- </div> -->
     </header>
     
     <div class="container my-5">
@@ -59,10 +72,6 @@
                 {% endfor %}
             </div>
         {% endif %}
-    
-        <div class="page-header">
-            <h2 class="mb-4">Page Header</h2>
-        </div>
     
         <div class="content">
             {% block content %}
