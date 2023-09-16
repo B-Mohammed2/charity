@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'charity_hub',
 ]
 
 # Middleware classes can perform various tasks, such as authentication, security checks, and modifying the request/response.

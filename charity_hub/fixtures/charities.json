@@ -1,0 +1,28 @@
+[
+{
+  "model": "charity_hub.charity",
+  "pk": 1,
+  "fields": {
+    "name": "Homeless Link",
+    "description": "It is the national membership charity representing organizations directly assisting individuals experiencing homelessness in England. There  mission is to enhance service quality and advocate for policy reforms aimed at eliminating homelessness.\"",
+    "contact_name": "Homeless Link",
+    "contact_email": "info@homelesslink.org.uk",
+    "contact_phone": "04313826",
+    "website": "https://homeless.org.uk",
+    "donation_link": null
+  }
+},
+{
+  "model": "charity_hub.charity",
+  "pk": 2,
+  "fields": {
+    "name": "Orphans in Need",
+    "description": "Dedicated to providing long-term, consistent support to orphan children and their families in need.",
+    "contact_name": "Orphans in Need",
+    "contact_email": "info@orphansinneed.org",
+    "contact_phone": "0207 100 8866",
+    "website": "https://www.orphansinneed.org.uk",
+    "donation_link": null
+  }
+}
+]
