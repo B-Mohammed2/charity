@@ -4,15 +4,25 @@
 {% block content %}
     <h1>Charities</h1>
     <div class="container">
-        <div class="raw">
-            <div class="col">
-              {{ charities }}
-            </div>
+        <div class="row">
+            {% for charity in charities %}
+                <div class="col">
+                    <h2>{{ charity.name }}</h2>
+                    <p>{{ charity.description }}</p>
+                    <p>Contact Name: {{ charity.contact_name }}</p>
+                    <p>Contact Email: {{ charity.contact_email }}</p>
+                    <p>Contact Phone: {{ charity.contact_phone }}</p>
+                    <p>Website: <a href="{{ charity.website }}" target="_blank">{{ charity.website }}</a></p>
+                    <p>Donation Link: <a href="{{ charity.donation_link }}" target="_blank">{{ charity.donation_link }}</a></p>
+                    {% if charity.image_url %}
+                        <img src="{{ charity.image_url }}" alt="{{ charity.name }} Image">
+                    {% else %}
+                        {% if charity.image %}
+                            <img src="{{ charity.image.url }}" alt="{{ charity.name }} Image">
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
     </div>
-
-
-
-
-
 {% endblock %}

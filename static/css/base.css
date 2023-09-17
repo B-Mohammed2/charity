@@ -145,3 +145,25 @@ nav {
     left: 0;
 }
 
+/* Center-align the footer content */
+.footer {
+    text-align: center;
+}
+
+/* Apply a warm background color */
+.footer {
+    background-color: #FFA500; /* You can change the color code to your desired warm color */
+    padding: 20px; /* Add some padding for spacing */
+}
+
+/* Style the social media icons */
+.footer i {
+    font-size: 24px; /* Adjust the icon size as needed */
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Style the quick links */
+.footer .quick-links {
+    margin-top: 20px; /* Add spacing between content and links */
+}
+

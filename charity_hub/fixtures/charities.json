@@ -9,7 +9,9 @@
     "contact_email": "info@homelesslink.org.uk",
     "contact_phone": "04313826",
     "website": "https://homeless.org.uk",
-    "donation_link": null
+    "donation_link": null,
+    "image_url": null,
+    "image": ""
   }
 },
 {
@@ -22,7 +24,9 @@
     "contact_email": "info@orphansinneed.org",
     "contact_phone": "0207 100 8866",
     "website": "https://www.orphansinneed.org.uk",
-    "donation_link": null
+    "donation_link": null,
+    "image_url": "https://www.orphansinneed.org.uk/_ui/themes/orphansinneed/media/logo.svg",
+    "image": ""
   }
 }
 ]
