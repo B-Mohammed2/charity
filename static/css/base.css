@@ -17,7 +17,7 @@ body {
 
 nav {
     background-color: #00ff3300; 
-    padding-left: 140px;
+    /* padding-left: 140px; */
 }
 
 .navbar-nav {
@@ -148,22 +148,6 @@ nav {
 /* Center-align the footer content */
 .footer {
     text-align: center;
+    background-color: #FFA500; /* Warm background color */
+    width:100%
 }
-
-/* Apply a warm background color */
-.footer {
-    background-color: #FFA500; /* You can change the color code to your desired warm color */
-    padding: 20px; /* Add some padding for spacing */
-}
-
-/* Style the social media icons */
-.footer i {
-    font-size: 24px; /* Adjust the icon size as needed */
-    margin: 0 10px; /* Add spacing between icons */
-}
-
-/* Style the quick links */
-.footer .quick-links {
-    margin-top: 20px; /* Add spacing between content and links */
-}
-
