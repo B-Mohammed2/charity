@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 class Charity(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Charities'
-        
+        verbose_name_plural = 'charities'
+
     name = models.CharField(max_length=255)
     description = models.TextField()
     contact_name = models.CharField(max_length=255, null=True, blank=True)

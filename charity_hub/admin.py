@@ -6,7 +6,11 @@ from . models import Charity, UserProfile
 class CharityAdmin(admin.ModelAdmin):
     list_display=(
         'name',
-        'website'
+        'description',
+        'contact_name',
+        'website',
+        'contact_email',
+        'donation_link',
     )
 
 class UserProfileAdmin(admin.ModelAdmin):
