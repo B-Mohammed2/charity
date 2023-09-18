@@ -40,22 +40,36 @@
                             <li class="list-inline-item">
                                 <a href="{% url 'home' %}" class="custom-nav-link">Home</a>
                             </li>
+                            
+                            <li class="list-inline-item">
+                                <a href="{% url 'charities' %}" class="custom-nav-link">Charities</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_payment' %}">
+                                    <div class="text-center">
+                                        <div>Payment</div>
+                                        <p class="my-0">
+                                            {% if grand_total %}
+                                                ${{ grand_total|floatformat:2 }}
+
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
                             {% if request.user.is_authenticated %}
                                 <li class="list-inline-item">
                                     {% if request.user.is_superuser %}
                                         <a href="http://127.0.0.1:8000/admin/" class="custom-nav-link"> Charity Management</a>
                                     {% endif %}
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="{% url 'charities' %}" class="custom-nav-link">My Profile</a>
-                                </li>
+                                
                                 <li class="list-inline-item">
                                     <p class="custom-nav-link">Welcome {{ user.username }}</p>
                                     <a href="{% url 'account_logout' %}" class="custom-nav-link">Logout</a>
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="custom-nav-link">Register</a>
                                     <a href="{% url 'account_login' %}" class="custom-nav-link">Login</a>
-                                
                                 </li>
                             {% endif %}
                         </ul>
